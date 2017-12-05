@@ -5,6 +5,8 @@
 
 A small application that fetch and show all YouTube videos from Autoridade Fitness channel.
 
+https://ggades.github.io/autoridade-video-webapp/
+
 ##
 
 Install dependencies:
