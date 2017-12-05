@@ -1,0 +1,8 @@
+release
+
+.DS_Store
+
+node_modules
+*.log
+
+*.bak
