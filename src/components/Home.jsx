@@ -103,7 +103,7 @@ class Home extends React.Component {
       htmlVideos.push(
         <div key="1" className="no-result">
           <div>Sem resultados.</div>
-          <div><img src="/img/no_results.png" alt="Sem resultados." /></div>
+          <div><img src="./img/no_results.png" alt="Sem resultados." /></div>
         </div>);
     }
 
