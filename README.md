@@ -3,9 +3,12 @@
 
 # Autoridade Fitness Hub
 
-A small application that fetch and show all YouTube videos from Autoridade Fitness channel.
+A small application that fetch and show all YouTube videos from Autoridade Fitness channel*.
 
 https://ggades.github.io/autoridade-video-webapp/
+
+
+<sup>***_Due to API errors/permissions to get videos from Autoridade Fitness, the default channel set in the source is PewDiePie._**</sup>
 
 ##
 
