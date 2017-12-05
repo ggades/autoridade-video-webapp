@@ -161,7 +161,7 @@ class Home extends React.Component {
           <Loading />
         </div>
         <footer className="footer text-center">
-          Made with <img src="/img/react.png" title="ReactJS" /> by
+          Made with <img src="./img/react.png" title="ReactJS" /> by
           <a href="https://github.com/ggades" target="_blank" title="Guilherme Gades"> @ggades</a>
         </footer>
       </div>

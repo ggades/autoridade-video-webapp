@@ -68,7 +68,7 @@ class Navbar extends React.Component {
       <nav className={this.state.scrollTop > 60 ? 'navbar colored navbar-fixed-top' : 'navbar navbar-fixed-top'}>
         <div className="text-center">
           <a href="/" title="Autoridade Fitness" className="logo">
-            <img src="/img/logo.png" alt="Autoridade Fitness" />
+            <img src="./img/logo.png" alt="Autoridade Fitness" />
           </a>
 
           <form className="form-inline" onSubmit={this.onSubmit}>
