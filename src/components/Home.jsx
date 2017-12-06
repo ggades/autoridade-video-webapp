@@ -15,7 +15,7 @@ class Home extends React.Component {
       videos: [],
       showModal: false,
       videoId: null,
-      mode: 0,
+      mode: Helper.getLocalStorage('appMode') || 0,
     };
 
     // Bind
@@ -62,9 +62,13 @@ class Home extends React.Component {
     e.stopPropagation();
 
     if (e.target.checked === true) {
-      this.setState({ mode: 1 });
+      this.setState({ mode: 1 }, () => {
+        Helper.setLocalStorage('appMode', 1);
+      });
     } else {
-      this.setState({ mode: 0 });
+      this.setState({ mode: 0 }, () => {
+        Helper.setLocalStorage('appMode', 0);
+      });
     }
   }
 
@@ -114,7 +118,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className={this.state.mode === 0 ? 'light-mode' : 'dark-mode'}>
-        <div className="videos-container container-fluid">
+        <div className="videos-container container">
           <Navbar fetchVideos={this.props.fetchVideos} router={this.props.router} />
 
           <div className="content clearfix">
@@ -134,6 +138,7 @@ class Home extends React.Component {
                   <input
                     type="checkbox"
                     className="hidden"
+                    defaultChecked={this.state.mode === 1 || false}
                     onChange={ this.changeMode }
                   />
                   <div className="slider round"></div>
