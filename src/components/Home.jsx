@@ -118,9 +118,8 @@ class Home extends React.Component {
   render() {
     return (
       <div className={this.state.mode === 0 ? 'light-mode' : 'dark-mode'}>
+        <Navbar fetchVideos={this.props.fetchVideos} />
         <div className="videos-container container">
-          <Navbar fetchVideos={this.props.fetchVideos} router={this.props.router} />
-
           <div className="content clearfix">
             <div className="description clearfix">
               Nossa equipe de profissionais tem anos de experiência treinando desde
@@ -177,7 +176,6 @@ class Home extends React.Component {
 Home.propTypes = {
   fetchVideos: PropTypes.func.isRequired,
   videos: PropTypes.array.isRequired,
-  router: PropTypes.object.isRequired,
 };
 
 export default Home;

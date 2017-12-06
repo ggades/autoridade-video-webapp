@@ -50,9 +50,9 @@ class Navbar extends React.Component {
     this.props.fetchVideos(channel, this.state.form.search);
 
     if (channel) {
-      this.props.router.push(`?channel=${channel}&q=${this.state.form.search}`);
+      window.location.replace(`?channel=${channel}&q=${this.state.form.search}`);
     } else {
-      this.props.router.push(`?q=${this.state.form.search}`);
+      window.location.replace(`?q=${this.state.form.search}`);
     }
   }
 
@@ -94,7 +94,6 @@ class Navbar extends React.Component {
 Navbar.propTypes = {
   scrollTop: PropTypes.number,
   fetchVideos: PropTypes.func.isRequired,
-  router: PropTypes.object.isRequired,
 };
 
 export default Navbar;
